@@ -1,0 +1,287 @@
+@import "mixin";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#hero .navbar ul{
+
+    display: flex;
+    align-items: center;
+     gap: 20px;
+     list-style: none;
+     justify-content: center;
+     margin-right: 50px;
+
+}
+
+#click{
+display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: url(images/1banner.jpg)no-repeat center center /cover;
+    height: 100px;
+    align-items: center; 
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    z-index: 50;
+
+}
+nav label{
+    color: black;
+    margin-right: 50px;
+display: none;
+}
+
+
+nav h3{
+    color: white;
+}
+nav ul {
+    display: flex;
+    gap: 30px;
+   
+    
+    
+}
+nav ul li {
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    border: 5px solid transparent;
+    border-radius: 35px;
+
+
+    
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+
+    
+    
+}
+nav ul li a:hover{
+    border: 5px solid transparent;
+    background-color: rgba(190, 240, 240, 0.425);
+
+    border-radius: 50px;
+
+
+}
+
+
+
+
+.banner{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(images/1banner.jpg)no-repeat center center/cover;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: white;
+    line-height: 50px;
+
+    .login{
+         background-color: white;
+        height: 350px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        padding: 20px;
+        border-radius: 20px;
+
+        h3{
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+           
+        }
+
+        input{
+            height: 35px;
+             border-radius: 40px;
+            padding-left: 10px;
+            border-top:transparent;
+            border-left: transparent;
+            border-right: transparent;
+        }
+
+        .sign a{
+            background-color: rgb(131, 131, 227);
+            width: 260px;
+            height:40px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        a{
+            color: black;
+            text-decoration: none;
+        }
+
+    }
+}
+.footer{
+    height: 100%;
+    background: url(images/1banner.jpg) no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    .copy{
+        p{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        }
+    }
+   
+    .address{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+       padding: 20px;
+       gap: 50px;
+       margin-top: 100px;
+       p{
+        padding-left: 10px;
+        padding-right: 30px;
+        line-height: 40px;
+       }
+    }
+    .logo{
+        display: flex;
+        gap: 50px;
+        font-size: 30px;
+        margin-top: 50px;
+        i{
+           background-color:black;
+            border: 10px solid black;
+            border-radius: 40px;
+
+        }
+    }
+}
+.footer::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 40, 69, 0.7);
+}
+.footer *{
+    z-index: 50;
+}
+
+
+@media screen and (max-width:769px){
+    nav label{
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #hero .navbar ul{
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        width: 100%;   
+        display: none;
+        
+    
+    }
+
+    #click:checked ~ #hero .navbar ul{
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        line-height: 1px;
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        right: 1px;
+    
+    }
+    
+    nav ul{
+        background-color:rgba(255, 255, 255, 0.976);
+        border-radius: 20px ;
+        margin-bottom: auto;
+        display: block;
+
+    
+    }
+    nav ul li a{
+        color: black;
+    }
+    nav ul li a:hover{
+        border: 20px solid transparent;
+        background-color: rgba(190, 240, 240, 0.964);
+    
+        border-radius: 50px;}
+        .footer{
+            margin-top: 100px;
+            .address{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+        
+        }
+        
+}    
+        @media screen and (max-width:426px) {
+            .footer{
+                margin-top: 100px;
+                .address{
+                    h3{
+                        font-size: 15px;
+                        line-height: 50px;
+                    }
+                    p{
+                        font-size: 15px;
+                        line-height: 30px;
+                    }
+                }
+            
+                }
+    .footer{
+        margin-top: 100px;
+        .news{
+        font-size: 20px;
+        gap: 30px;
+        padding: 10px;
+        line-height: 1px;
+        }
+    
+    }
+    
+}

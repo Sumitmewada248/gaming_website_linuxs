@@ -1,0 +1,26 @@
+@mixin display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@mixin display1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+    @mixin display2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;}
+        
+        @mixin display-row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;}
+
+@mixin commoncode( $pawan1,$pawan2){
+    color: white;
+    letter-spacing: $pawan1;
+    font-size: $pawan2;
+}
